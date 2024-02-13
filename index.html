@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konverter Suhu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <header id="navigation-bar">
+        <h3 id="logo">Kalkulator konversi Suhu Sederhana</h3>
+    </header>
+    <br>
+    <div class="description" id="description Celcius">
+        Masukkan suhu derajat celcius (ᵒC) ke kotak dibawah, 
+        <br>
+        lalu klik tombol konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (ᵒF)
+    </div>
+
+    <div class="input-section">
+        <form onsubmit="event.preventDefault(); konversi();">
+            <label for="input-field-celsius">Masukkan Suhu (Celsius)</label>
+            <input type="number" id="input-field-celsius" class="input-field" step="any" required>
+            <div id="celsius-calculation" class="explanation"></div>
+            <div class="button-group">
+                <button type="submit" class="my-button">Konversi</button>
+                <button type="button" class="my-button" onclick="resetForm('input-field-celsius', 'hasil-form', 'celsius-calculation')">Reset</button>
+            </div>
+        </form>
+    </div>
+    <div id="hasil-form" class="hasil-konversi"></div>
+    <div id="explanation Fahrenheit" class="explanation">
+        <b>Cara Konversi dari Celcius (ᵒC) ke Fahrenheit (ᵒF)</b>
+        <br>
+        <br>
+        Suhu (S) dalam derajat Fahrenheit (ᵒF) sama dengan suhu (S) dalam derajat Celcius (ᵒC) dikalikan 9/5, kemudian hasilnya ditambah 32
+        <br>
+        <br>
+        S(ᵒF) = (S(ᵒC) x 9/5) + 32
+    </div>
+    <br>
+    <hr id="hr-line">
+    <br>
+    <div class="description" id="description Fahrenheit">
+        Masukkan suhu derajat Fahrenheit (Fᵒ) ke kotak dibawah, 
+        <br>
+        lalu klik tombol konversi untuk mendapatkan hasil konversi dalam bentuk Celcius (Cᵒ)
+    </div>
+
+    <div class="input-section">
+        <form onsubmit="event.preventDefault(); konversiFahrenheit();">
+            <label for="input-field-fahrenheit">Masukkan Suhu (Fahrenheit)</label>
+            <input type="number" id="input-field-fahrenheit" class="input-field" step="any" required>
+            <div id="fahrenheit-calculation" class="explanation"></div>
+            <div class="button-group">
+                <button type="submit" class="my-button">Konversi</button>
+                <button type="button" class="my-button" onclick="resetForm('input-field-fahrenheit', 'hasil-form-fahrenheit', 'fahrenheit-calculation')">Reset</button>
+            </div>
+        </form>
+    </div>
+    <div id="hasil-form-fahrenheit" class="hasil-konversi"></div>
+
+    <div id="explanation Celcius" class="explanation">
+        <b>Cara Konversi dari Fahrenheit (ᵒF) ke Celcius (ᵒC)</b>
+        <br>
+        <br>
+        Suhu (S) dalam derajat Celcius (ᵒC) sama dengan suhu (S) dalam derajat Fahrenheit (ᵒF) dikurangi 32, kemudian hasilnya dikalikan 5/9.
+        <br>
+        <br>
+        S(ᵒC) = (S(ᵒF) - 32) × 5/9
+    </div>
+</body>
+<br>
+<footer id="footer">
+    <p class="contact">Hubungi Saya</p>
+    <p class="contact"> <span class="label">Email    :fauzansatrio32@gmail.com</span></p>
+    <p class="contact"> <span class="label">Telepon  :085810478290</span></p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/_satrio13" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+            <a href="https://wa.me/+6285810478290" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/800px-WhatsApp_logo-color-vertical.svg.png" alt="WhatsApp"></a>
+            <a href="https://www.linkedin.com/in/fauzan-satrio-wicaksono-41a98a273/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="linkedin"/></a>
+        </div>
+        <br>
+        <br>
+    <p>
+    "Tugas ini dibuat untuk memenuhi persyaratan kelulusan mini course REVOU Software Engineering Fundamental Course"
+    </p>
+</footer>
+</html>
